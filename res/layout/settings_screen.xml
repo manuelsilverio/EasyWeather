@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+   
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonCelciusSet"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:background="#0099CC"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Celcius" />
+
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonFarenheitSet"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:background="#99D6EB"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Farenheit" />
+
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+
+    </TableRow>
+    
+     <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/tableRow1"
+        android:layout_marginBottom="50dp"
+        android:textColor="#0099CC"
+        android:textSize="30sp"
+        android:text="Select Units" />
+
+     <TextView
+         android:id="@+id/api_copyRight"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="40dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:gravity="center"
+         android:textSize="12sp"
+         android:textColor="@android:color/darker_gray"
+         android:text="@string/api_copy_right" />
+
+</RelativeLayout>

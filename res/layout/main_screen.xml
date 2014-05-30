@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099CC" >
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/mainWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cityTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" >
+
+        <RelativeLayout
+            android:id="@+id/today_icon_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:id="@+id/todayIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/descTodayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/todayIcon"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tempTodayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/today_icon_wrapper"
+            android:text="Temp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/forecastContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+            android:id="@+id/tomorrowFather"
+            android:layout_height="80dp"
+            android:layout_marginBottom="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2" >
+		
+			<RelativeLayout
+	            android:id="@+id/tomorrow_icon_wrapper"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerHorizontal="true" >
+	            
+	            <ImageView
+	                android:id="@+id/TomorrowIcon"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/ic_launcher" />
+	
+	            <TextView
+	                android:id="@+id/descTomorrowTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@id/TomorrowIcon"
+	                android:layout_centerVertical="true"
+	                android:text="TextView"
+	                android:textColor="@android:color/white"
+	                android:textSize="13sp"
+	                android:textStyle="italic" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/TomorrowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tomorrow_icon_wrapper"
+                android:text="@string/tomorrow"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filler"
+            android:layout_height="70dp"
+            android:layout_weight="3" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dayAfterFather"
+            android:layout_height="80dp"
+            android:layout_weight="2" >
+
+            <RelativeLayout
+	            android:id="@+id/dayAfter_icon_wrapper"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerHorizontal="true" >
+            
+	            <ImageView
+	                android:id="@+id/dayAfterIcon"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/ic_launcher" />
+	
+	             <TextView
+	                android:id="@+id/DescDayAfterTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@id/dayAfterIcon"
+	                android:text="TextView"
+	                android:textColor="@android:color/white"
+	                android:textSize="13sp"
+	                android:textStyle="italic" />
+	             
+            </RelativeLayout>
+            
+            <TextView
+                android:id="@+id/dayAfterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dayAfter_icon_wrapper"
+                android:text="@string/dayAfter"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+           
+        </RelativeLayout>
+    </TableRow>
+
+</RelativeLayout>
