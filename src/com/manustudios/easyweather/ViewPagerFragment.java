@@ -91,7 +91,7 @@ public class ViewPagerFragment extends Fragment{
 			dayAfterDesc.setText(mDesc[2]);
 			
 			city.setText(mCity);
-			temp.setText(mTemp[0]);
+			temp.setText(mTemp[0].substring(0, 2)+"ºC");
 			
 			
 			String preIconUrl =  "http://openweathermap.org/img/w/";
@@ -99,11 +99,14 @@ public class ViewPagerFragment extends Fragment{
 			String iconTodayUrl = preIconUrl+mIcons[0]+postIconUrl;
 			String iconTomorrowUrl = preIconUrl+mIcons[1]+postIconUrl;
 			String iconDayAfterUrl = preIconUrl+mIcons[2]+postIconUrl;
+			
+			
 			Log.i("today icon", iconTodayUrl);
 			Picasso.with(mContext).load(iconTodayUrl).resize(50, 50).centerCrop().into(todayIcon);
 			Picasso.with(mContext).load(iconTomorrowUrl).resize(50, 50).centerCrop().into(tomorrowIcon);
 			Picasso.with(mContext).load(iconDayAfterUrl).resize(50, 50).centerCrop().into(dayAfterIcon);
 			Log.i("manu-pager-debug", "chk");
+			
 		}else{
 			rootView = (ViewGroup) inflater.inflate(R.layout.settings_screen, null);
 			Button celciusButton = (Button) rootView.findViewById(R.id.buttonCelciusSet);
